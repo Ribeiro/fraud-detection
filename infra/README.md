@@ -1,3 +1,3 @@
 # Infraestrutura
 
-Docker Compose para Kafka, Redis, Postgres e Registry.
+Infraestrutura local com Kafka, Redis, Postgres, Schema Registry e dashboard simples em Node.js

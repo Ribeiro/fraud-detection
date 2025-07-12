@@ -1,2 +1,3 @@
 #!/bin/bash
-echo 'Inicializando infraestrutura...'
+docker compose up -d
+echo "Infraestrutura inicializada!"
