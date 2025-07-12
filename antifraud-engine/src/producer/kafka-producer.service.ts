@@ -1,5 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { KafkaPublisherSubscriber } from 'msg-broker-lib';
+import { AntifraudResult } from 'src/service/antifraud.service';
 
 @Injectable()
 export class KafkaProducerService {
@@ -8,7 +9,7 @@ export class KafkaProducerService {
     private readonly kafkaClient: KafkaPublisherSubscriber,
   ) {}
 
-  async emitHeuristicEvaluated(event: any) {
+  async emitHeuristicEvaluated(event: AntifraudResult) {
     try {
       await this.kafkaClient.publish(
         {

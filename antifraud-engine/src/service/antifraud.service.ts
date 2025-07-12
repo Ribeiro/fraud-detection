@@ -28,9 +28,9 @@ export class AntifraudService {
       heuristicScore,
       decision,
     };
-
-    this.logger.log(`Heuristic evaluation result for transaction ${transactionId}`, JSON.stringify(result));
+    
     await this.producer.emitHeuristicEvaluated(result);
+    this.logger.log(`Heuristic evaluation result for transaction ${transactionId}`, JSON.stringify(result));
   }
 
   private calculateHeuristicScore(amount: number): number {
