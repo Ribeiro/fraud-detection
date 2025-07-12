@@ -1,0 +1,27 @@
+{
+  "info": {
+    "name": "Antifraud API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Authorize Transaction",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"cpf\": \"12345678900\", \"amount\": 1000.0 }"
+        },
+        "url": {
+          "raw": "http://localhost:3000/transactions/authorize"
+        }
+      }
+    }
+  ]
+}

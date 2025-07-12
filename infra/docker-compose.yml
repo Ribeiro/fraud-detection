@@ -1,0 +1,16 @@
+
+version: '3.8'
+services:
+  kafka:
+    image: confluentinc/cp-kafka
+    ports: [9092:9092]
+  redis:
+    image: redis
+    ports: [6379:6379]
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_DB: antifraud
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+    ports: [5432:5432]

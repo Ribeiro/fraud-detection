@@ -1,0 +1,3 @@
+rule1:
+  condition: amount > 1000
+  action: flag
